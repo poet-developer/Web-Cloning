@@ -12,7 +12,6 @@
                flex-direction: column;
                width: 100vw;
                height: 100%;
-
           }
 
           .header {
@@ -29,7 +28,7 @@
                background-color: black;
                color: red;
 
-               z-index: 2
+               z-index: 2;
           }
 
           .header .logo {
@@ -40,10 +39,11 @@
 
           .header .menu-bar {
                display: flex;
-               width: 100%;
-               justify-content: space-around;
+               /* width: 100%; */
+               justify-content: center;
                padding: 0 5rem 0 5rem;
                background-color: aliceblue;
+               gap: 2rem;
           }
 
           .header .menu-bar .item {
@@ -51,6 +51,76 @@
                background-color: blue;
                display: flex;
                align-items: center;
+          }
+
+
+          .header .right-etc {
+               display: flex;
+               padding: 0 1rem 0 1rem;
+               justify-content: space-around;
+               width: 260px;
+               align-items: center;
+               background-color: teal;
+          }
+
+          .header .right-etc .menu-icon {
+               display: none;
+          }
+
+          .header .search-bar input {
+               width: 100px;
+          }
+
+          .body-container {
+               /* display: flex; */
+               padding-top: 110px;
+               /* header 밑 여백 px  - mobile media query */
+               width: 100%;
+               height: 100%;
+               background-color: grey;
+               color: azure;
+          }
+
+          .body-container .slider-container {
+               padding: 2rem 2rem 4rem 2rem;
+               background-color: tomato;
+               display: flex;
+          }
+
+          .body-container .body-item {
+               width: 100vw;
+               height: 300px;
+               background-color: #4747b3;
+          }
+
+          .slider-container .slider {
+               width: 100vw;
+               height: 500px;
+               background-color: antiquewhite;
+               display: flex;
+               flex-direction: row;
+               position: relative;
+          }
+
+          .slider-container .slider .slider-item {
+               color: black;
+          }
+
+          .slider-item:nth-child(1) {
+               flex-grow: 5;
+          }
+
+          .slider-item:nth-child(2) {
+               flex-grow: 4;
+               background-color: #4747b3;
+          }
+
+          .footer-container {
+               display: flex;
+               width: 100%;
+               height: 100px;
+               background-color: black;
+               color: azure;
           }
 
           @media(max-width : 1000px) {
@@ -61,43 +131,23 @@
                .header .right-etc .menu-icon {
                     display: block;
                }
-          }
 
-          .header .right-etc {
-               display: flex;
-               margin-right: 2rem;
-               width: 250px;
-               align-items: center;
-          }
+               .header .search-bar input {
+                    display: none;
+               }
 
-          .header .right-etc .menu-icon {
-               display: none;
-               width: 50px;
-               height: 50px;
-          }
-
-          .body-container {
-               display: flex;
-               padding-top: 110px;
-               /* header 밑 여백 px  - mobile media query */
-               width: 100%;
-               height: 110vh;
-               background-color: grey;
-               color: azure;
-          }
-
-          .footer-container {
-               display: flex;
-               width: 100%;
-               height: 100px;
-               background-color: black;
-               color: azure;
+               .body-container .slider {
+                    width: 100vw;
+                    height: 450px;
+                    background-color: antiquewhite;
+                    flex-direction: column;
+               }
           }
      </style>
      <title>WEB-CLONING</title>
 </head>
 
-<body>
+<body class="body">
      <div class="main-container">
           <header class="main-item header">
                <div class="logo">LOGO</div>
@@ -118,7 +168,15 @@
                </div>
           </header>
           <div class="main-item body-container">
-               body
+               <div class="slider-container">
+                    <div class="slider">
+                         <div class="slider-item cover">img</div>
+                         <div class="slider-item desc">description</div>
+                    </div>
+               </div>
+               <div class="body-item"></div>
+               <div class="body-item"></div>
+
           </div>
           <div class="main-item footer-container">
                footer
@@ -135,4 +193,4 @@
 
 </html>
 
-<!-- TODO: flex, gird : fixed bar-GNB -->
+<!-- TODO: flex, gird : fixed bar-GNB // y-scroll hiden-->
