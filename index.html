@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./css/reset.css">
+     <style>
+          .main-container {
+               display: flex;
+               flex-direction: column;
+               width: 100vw;
+               height: 100%;
+
+          }
+
+          .header {
+               position: fixed;
+               top: 0;
+               left: 0;
+
+               display: flex;
+               flex: 1 1 auto;
+               justify-content: space-between;
+               width: 100vw;
+               height: 100px;
+               /* 고정 값  */
+               background-color: black;
+               color: red;
+
+               z-index: 2
+          }
+
+          .header .logo {
+               min-width: 200px;
+               height: 100%;
+               background-color: gold;
+          }
+
+          .header .menu-bar {
+               display: flex;
+               width: 100%;
+               justify-content: space-around;
+               padding: 0 5rem 0 5rem;
+               background-color: aliceblue;
+          }
+
+          .header .menu-bar .item {
+               cursor: pointer;
+               background-color: blue;
+               display: flex;
+               align-items: center;
+          }
+
+          @media(max-width : 1000px) {
+               .header .menu-bar {
+                    display: none;
+               }
+
+               .header .right-etc .menu-icon {
+                    display: block;
+               }
+          }
+
+          .header .right-etc {
+               display: flex;
+               margin-right: 2rem;
+               width: 250px;
+               align-items: center;
+          }
+
+          .header .right-etc .menu-icon {
+               display: none;
+               width: 50px;
+               height: 50px;
+          }
+
+          .body-container {
+               display: flex;
+               padding-top: 110px;
+               /* header 밑 여백 px  - mobile media query */
+               width: 100%;
+               height: 110vh;
+               background-color: grey;
+               color: azure;
+          }
+
+          .footer-container {
+               display: flex;
+               width: 100%;
+               height: 100px;
+               background-color: black;
+               color: azure;
+          }
+     </style>
+     <title>WEB-CLONING</title>
+</head>
+
+<body>
+     <div class="main-container">
+          <header class="main-item header">
+               <div class="logo">LOGO</div>
+               <ul class="menu-bar">
+                    <li class="item">기술</li>
+                    <li class="item">사람&문화</li>
+                    <li class="item">지속가능경영</li>
+                    <li class="item">프레스센터</li>
+                    <li class="item">회사소개</li>
+               </ul>
+               <div class="right-etc">
+                    <div class="search-bar">
+                         <input type="text" placeholder="반도체를 검색해 보세요">
+                         <button>0</button>
+                    </div>
+                    <div class="lang">ICON</div>
+                    <div class="menu-icon">ㅁ</div>
+               </div>
+          </header>
+          <div class="main-item body-container">
+               body
+          </div>
+          <div class="main-item footer-container">
+               footer
+          </div>
+     </div>
+     <script>
+          (
+               function () {
+                    console.log('void')
+               }
+          )();
+     </script>
+</body>
+
+</html>
+
+<!-- TODO: flex, gird : fixed bar-GNB -->
