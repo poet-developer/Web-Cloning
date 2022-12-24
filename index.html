@@ -1,148 +1,33 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="./css/reset.css">
+     <link rel="stylesheet" href="./css/header.css">
+     <link rel="stylesheet" href="./css/slider.css">
+     <link rel="stylesheet" href="./css/grid.css">
+     <link rel="stylesheet" href="./css/footer.css">
      <style>
           .main-container {
-               display: flex;
-               flex-direction: column;
                width: 100vw;
                height: 100%;
+               background-color: gray;
           }
 
-          .header {
-               position: fixed;
-               top: 0;
-               left: 0;
-
-               display: flex;
-               flex: 1 1 auto;
-               justify-content: space-between;
-               width: 100vw;
-               height: 100px;
-               /* 고정 값  */
-               background-color: black;
-               color: red;
-
-               z-index: 2;
+          .etc-con {
+               margin-top: 2rem;
           }
 
-          .header .logo {
-               min-width: 200px;
-               height: 100%;
-               background-color: gold;
-          }
-
-          .header .menu-bar {
-               display: flex;
-               /* width: 100%; */
-               justify-content: center;
-               padding: 0 5rem 0 5rem;
-               background-color: aliceblue;
-               gap: 2rem;
-          }
-
-          .header .menu-bar .item {
-               cursor: pointer;
-               background-color: blue;
-               display: flex;
-               align-items: center;
-          }
-
-
-          .header .right-etc {
-               display: flex;
-               padding: 0 1rem 0 1rem;
-               justify-content: space-around;
-               width: 260px;
-               align-items: center;
-               background-color: teal;
-          }
-
-          .header .right-etc .menu-icon {
-               display: none;
-          }
-
-          .header .search-bar input {
-               width: 100px;
-          }
-
-          .body-container {
-               /* display: flex; */
-               padding-top: 110px;
-               /* header 밑 여백 px  - mobile media query */
-               width: 100%;
-               height: 100%;
-               background-color: grey;
-               color: azure;
-          }
-
-          .body-container .slider-container {
-               padding: 2rem 2rem 4rem 2rem;
-               background-color: tomato;
-               display: flex;
-               flex-direction: column;
-               justify-content: center;
-               align-items: center;
-          }
-
-          .body-container .body-item {
-               width: 100vw;
-               height: 300px;
+          .etc-item {
+               height: 20rem;
                background-color: #4747b3;
           }
 
           .body-container :nth-last-child(1) {
                position: relative;
-          }
-
-          /* footer 바로 위 버튼 컨테이너  */
-
-          .slider-container .slider-item {
-               width: 100vw;
-               height: 500px;
-               background-color: antiquewhite;
-               display: flex;
-               flex-direction: row;
-               position: relative;
-          }
-
-          .slider-container .circle {
-               margin-top: 1rem;
-               color: azure;
-          }
-
-          .slider-container .slider-item {
-               color: black;
-          }
-
-
-          .slider-item .cover {
-               flex-grow: 5;
-          }
-
-          .slider-item .desc {
-               flex-grow: 4;
-               background-color: #4747b3;
-          }
-
-          .footer-container {
-               display: flex;
-               flex-direction: column;
-               width: 100%;
-               height: 200px;
-               background-color: teal;
-               color: azure;
-               align-items: center;
-               position: relative;
-          }
-
-          .body-item .grid-container {
-               display: grid;
           }
 
           .body-item #top-btn {
@@ -155,40 +40,16 @@
                position: absolute;
                bottom: 0px;
                left: calc(50% - 25px);
-          }
 
-          .footer-container .footer-item {
-               background-color: black;
-               width: 100%;
-               height: 100%;
-               /* margin-top: 3rem; */
-          }
-
-          @media(max-width : 1000px) {
-               .header .menu-bar {
-                    display: none;
-               }
-
-               .header .right-etc .menu-icon {
-                    display: block;
-               }
-
-               .header .search-bar input {
-                    display: none;
-               }
-
-               .body-container .slider-item {
-                    width: 100vw;
-                    height: 450px;
-                    background-color: antiquewhite;
-                    flex-direction: column;
-               }
+               display: flex;
+               justify-content: center;
+               align-items: center;
           }
      </style>
-     <title>WEB-CLONING</title>
+     <title>Re</title>
 </head>
 
-<body class="body">
+<body>
      <div class="main-container">
           <header class="main-item header">
                <div class="logo">LOGO</div>
@@ -208,39 +69,54 @@
                     <div class="menu-icon">ㅁ</div>
                </div>
           </header>
-          <div class="main-item body-container">
+          <section class="main-item body-container">
                <div class="slider-container">
-                    <div class="slider-item">
-                         <div class="cover">img</div>
-                         <div class="desc">description</div>
+                    <div class="inner">
+                         <i class="controler">[</i>
+                         <div class="slider-item">
+                              <div class="cover">img</div>
+                              <div class="desc">description</div>
+                         </div>
+                         <i class="controler">]</i>
                     </div>
                     <div class="circle">● ● ●</div>
                     <!-- //data형태로 불러온다 -> js -->
                </div>
-               <div class="body-item grid-container">탭애니메이션 + 글더보기-Grid</div>
-               <!-- //grid -->
-               <div class="body-item">미디어라이브러리</div>
-               <div class="body-item">회사소개</div>
-               <div class="body-item">뉴스</div>
-               <div class="body-item">
-                    <button id="top-btn">위</button>
+               <div class="inner2">
+                    <div class="grid-container">
+                         <div class="grid-item">A</div>
+                         <div class="grid-item">B</div>
+                         <div class="grid-item">C</div>
+                         <div class="grid-item">D</div>
+                         <div class="grid-item">E</div>
+                         <div class="grid-item">F</div>
+                         <div class="grid-item">G</div>
+                         <div class="grid-item">H</div>
+                         <div class="grid-item">I</div>
+                         <div class="grid-item">J</div>
+                         <div class="grid-item">A</div>
+                         <div class="grid-item">B</div>
+                         <div class="grid-item">C</div>
+                         <div class="grid-item">D</div>
+                         <div class="grid-item">E</div>
+                         <div class="grid-item">F</div>
+                    </div>
+                    <div class="card-more"><a href="">글 더보기</a></div>
                </div>
-
-
-          </div>
+               <!-- //grid -->
+               <section class="etc-con">
+                    <div class="etc-item">미디어라이브러리</div>
+                    <div class="etc-item">회사소개</div>
+                    <div class="etc-item">뉴스</div>
+               </section>
+               <div class="body-item">
+                    <i id="top-btn">위</i>
+               </div>
+          </section>
           <div class="main-item footer-container">
                <div class="footer-item">footer</div>
           </div>
      </div>
-     <script>
-          (
-               function () {
-                    console.log('void')
-               }
-          )();
-     </script>
 </body>
 
 </html>
-
-<!-- TODO: flex, gird : fixed bar-GNB // y-scroll hiden-->
