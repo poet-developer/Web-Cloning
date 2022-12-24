@@ -8,7 +8,9 @@
      <link rel="stylesheet" href="./css/reset.css">
      <link rel="stylesheet" href="./css/header.css">
      <link rel="stylesheet" href="./css/slider.css">
+     <link rel="stylesheet" href="./css/tab.css">
      <link rel="stylesheet" href="./css/grid.css">
+     <link rel="stylesheet" href="./css/etc.css">
      <link rel="stylesheet" href="./css/footer.css">
      <style>
           .main-container {
@@ -17,33 +19,9 @@
                background-color: gray;
           }
 
-          .etc-con {
-               margin-top: 2rem;
-          }
-
-          .etc-item {
-               height: 20rem;
-               background-color: #4747b3;
-          }
-
-          .body-container :nth-last-child(1) {
+          .body-container .body-item {
+               height: 10rem;
                position: relative;
-          }
-
-          .body-item #top-btn {
-               width: 50px;
-               height: 50px;
-               background-color: black;
-               color: azure;
-               border-radius: 50px;
-               margin-bottom: 1rem;
-               position: absolute;
-               bottom: 0px;
-               left: calc(50% - 25px);
-
-               display: flex;
-               justify-content: center;
-               align-items: center;
           }
      </style>
      <title>Re</title>
@@ -83,6 +61,21 @@
                     <!-- //data형태로 불러온다 -> js -->
                </div>
                <div class="inner2">
+                    <div class="contents-tab">
+                         <ul class="card-tab">
+                              <l1 class="tab-list">추천 글</l1>
+                              <l1 class="tab-list">기술</l1>
+                              <l1 class="tab-list">사람&문화</l1>
+                              <l1 class="tab-list">지속가능경영</l1>
+                              <l1 class="tab-list">보도자료</l1>
+                         </ul>
+                         <div class="check-tab">
+                              <input type="checkbox" id="최신">
+                              <label for="최신">최신</label>
+                              <input type="checkbox" id="인기">
+                              <label for="인기">인기</label>
+                         </div>
+                    </div>
                     <div class="grid-container">
                          <div class="grid-item">A</div>
                          <div class="grid-item">B</div>
