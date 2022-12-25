@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
      <meta charset="UTF-8">
@@ -7,6 +7,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="./css/reset.css">
      <link rel="stylesheet" href="./css/header.css">
+     <link rel="stylesheet" href="./css/splide.min.css">
      <link rel="stylesheet" href="./css/slider.css">
      <link rel="stylesheet" href="./css/tab.css">
      <link rel="stylesheet" href="./css/grid.css">
@@ -28,7 +29,9 @@
 </head>
 
 <body>
+     <!-- flex에 기반한 레이아웃 구성  main-container : main-item -->
      <div class="main-container">
+          <!-- header - DNS -->
           <header class="main-item header">
                <div class="logo">LOGO</div>
                <ul class="menu-bar">
@@ -46,19 +49,20 @@
                     <div class="lang">ICON</div>
                     <div class="menu-icon">ㅁ</div>
                </div>
+
           </header>
+          <!-- header - DNS  -->
           <section class="main-item body-container">
                <div class="slider-container">
-                    <div class="inner">
-                         <i class="controler">[</i>
-                         <div class="slider-item">
-                              <div class="cover">img</div>
-                              <div class="desc">description</div>
+                    <!-- Splide Library -->
+                    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                         <div class="splide__track">
+                              <ul class="splide__list">
+                                   <!-- slide data : 데이터 개수에 따른 페이지 생성-->
+                              </ul>
                          </div>
-                         <i class="controler">]</i>
                     </div>
-                    <div class="circle">● ● ●</div>
-                    <!-- //data형태로 불러온다 -> js -->
+                    <!-- Splide Library -->
                </div>
                <div class="inner2">
                     <div class="contents-tab">
@@ -97,7 +101,7 @@
                     <div class="card-more"><a href="">글 더보기</a></div>
                </div>
                <!-- //grid -->
-               <section class="etc-con">
+               <section style="background-image: url();" class="etc-con">
                     <div class="etc-item">미디어라이브러리</div>
                     <div class="etc-item">회사소개</div>
                     <div class="etc-item">뉴스</div>
@@ -110,6 +114,15 @@
                <div class="footer-item">footer</div>
           </div>
      </div>
+
+     <script src="./js/splide.min.js"></script>
+     <script>
+          document.addEventListener('DOMContentLoaded', function () {
+               var splide = new Splide('.splide');
+               splide.mount();
+          });
+     </script>
+     <script src="./js/slider.js"></script>
 </body>
 
 </html>
