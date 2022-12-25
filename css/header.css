@@ -7,11 +7,10 @@
                flex: 1 1 auto;
                justify-content: space-between;
                width: 100vw;
-               height: 100px;
+               height: 80px;
                /* 고정 값  */
-               background-color: black;
-               color: red;
 
+               background-color: aliceblue;
                z-index: 2;
           }
 
@@ -19,22 +18,6 @@
                min-width: 200px;
                height: 100%;
                background-color: gold;
-          }
-
-          .header .menu-bar {
-               display: flex;
-               /* width: 100%; */
-               justify-content: center;
-               padding: 0 5rem 0 5rem;
-               background-color: aliceblue;
-               gap: 2rem;
-          }
-
-          .header .menu-bar .item {
-               cursor: pointer;
-               background-color: blue;
-               display: flex;
-               align-items: center;
           }
 
 
@@ -53,6 +36,79 @@
 
           .header .search-bar input {
                width: 100px;
+          }
+
+          .dropdown {
+               float: left;
+               overflow: hidden;
+               display: flex;
+               align-items: center;
+               /* width: 100%; */
+               justify-content: center;
+               padding: 0 5rem 0 5rem;
+               gap: 2rem;
+               height: 100%;
+               color: grey;
+               font-size: 1.2rem;
+               font-weight: bold;
+          }
+
+          .dropdown .item {
+               width: 100px;
+          }
+
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               background-color: #f9f9f9;
+               min-width: calc(100vw + 4rem);
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+               top: 80px;
+               padding-left: 5rem;
+          }
+
+          .index-title {
+               width: 100%;
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               gap: 1rem;
+               height: 80px;
+               border-bottom: 1px solid gray;
+          }
+
+          .index-title a {
+
+               width: 100%;
+               height: 100%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          .index-detail {
+               width: 100%;
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+               gap: 1rem;
+               height: 80px;
+               margin-top: 1rem;
+          }
+
+          .index-list {
+               display: flex;
+               flex-direction: column;
+               gap: 2rem;
+          }
+
+          .dropdown:hover .dropdown-content {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               height: 300px;
+               gap: 2rem;
           }
 
           @media(max-width : 950px) {
