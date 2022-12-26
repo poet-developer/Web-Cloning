@@ -105,11 +105,14 @@
                <div class="inner2">
                     <div class="contents-tab">
                          <ul class="card-tab">
-                              <l1 class="tab-list">추천 글</l1>
-                              <l1 class="tab-list">기술</l1>
-                              <l1 class="tab-list">사람&문화</l1>
-                              <l1 class="tab-list">지속가능경영</l1>
-                              <l1 class="tab-list">보도자료</l1>
+                              <l1 class="tab-list">
+                                   <a data-tab="추천" href="">추천</a>
+                              </l1>
+                              <l1 class="tab-list"><a data-tab="기술" href="">기술</a></l1>
+                              <l1 class="tab-list"><a data-tab="사람문화" href="">사람&문화</a>
+                              </l1>
+                              <l1 class="tab-list"><a data-tab="지속가능경영" href="">지속가능경영</a></l1>
+                              <l1 class="tab-list"><a data-tab="보도자료" href="">보도자료</a></l1>
                          </ul>
                          <div class="check-tab">
                               <input type="checkbox" id="최신">
@@ -119,7 +122,7 @@
                          </div>
                     </div>
                     <div class="grid-container">
-                         <div class="grid-item">A</div>
+                         <!-- <div class="grid-item">A</div>
                          <div class="grid-item">B</div>
                          <div class="grid-item">C</div>
                          <div class="grid-item">D</div>
@@ -134,7 +137,7 @@
                          <div class="grid-item">C</div>
                          <div class="grid-item">D</div>
                          <div class="grid-item">E</div>
-                         <div class="grid-item">F</div>
+                         <div class="grid-item">F</div> -->
                     </div>
                     <div class="card-more"><a href="">글 더보기</a></div>
                </div>
@@ -152,7 +155,7 @@
                <div class="footer-item">footer</div>
           </div>
      </div>
-
+     <!-- 슬라이더 라이브러리를 포함한 js -->
      <script src="./js/splide.min.js"></script>
      <script>
           document.addEventListener('DOMContentLoaded', function () {
@@ -161,6 +164,8 @@
           });
      </script>
      <script src="./js/slider.js"></script>
+     <!-- 슬라이더 라이브러리를 포함한 js -->
+     <script src="./js/tab-card.js"></script>
 </body>
 
 </html>

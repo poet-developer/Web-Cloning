@@ -5,13 +5,27 @@
      width: 100%;
 }
 
-.contents-tab .card-tab .tab-list {
-     margin: 1rem;
-     padding: 0.5rem;
-     background-color: aliceblue;
-     flex: 0 0 85px;
+.contents-tab .card-tab {
+     display: flex;
+     justify-content: space-between;
+}
 
+.contents-tab .card-tab .tab-list a {
+     margin: 1rem;
+     flex: 0 0 100px;
+     padding-bottom: 1rem;
      text-align: center;
+     text-decoration: none;
+     color: black;
+     font-weight: 600;
+}
+
+.contents-tab .card-tab .tab-list a:hover {
+     border-bottom: 5px teal solid
+}
+
+.check-tab {
+     margin-bottom: 2rem;
 }
 
 @media(max-width : 950px) {

@@ -41,7 +41,6 @@
                          newDiv.style.background = data[i].color
                          contentElem.appendChild(newDiv);
                     }
-
                }
 
                init();
