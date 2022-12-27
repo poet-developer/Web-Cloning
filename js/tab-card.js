@@ -1,7 +1,6 @@
 (function(){
      const girdContainer = document.querySelector('.grid-container');
      const tabItems = document.querySelectorAll('.tab-list');
-     // const cardItems = document.querySelectorAll('.grid-item');
      let currentTab = '추천';
      const dummyData = [
           {id : 0,title: 'Adsdsdsd', topic: '추천 기술 사람문화'},
