@@ -72,6 +72,7 @@
                     newDiv.setAttribute('data-topic',data[i].topic);
                     newDiv.innerHTML = `<div class = 'image' style = "background-image: url(${data[i].cover});"></div><div class = 'box'><h4 class = 'title'>${data[i].title}</h4><br><h5 class = 'topic'>${data[i].topic}</h5><br><p class = 'desc'>${data[i].desc || ''}</p></div>`;
                     girdContainer.append(newDiv);
+               // 이미지, 제목, 장르, 설명
                }
      }
 
