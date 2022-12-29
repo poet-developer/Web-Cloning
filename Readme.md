@@ -4,3 +4,6 @@
 4. PC/Mobile 반응형 구축 : Flex & Grid 레이아웃, 미디어쿼리 사용
 5. footer위에 스크롤 맨 위로 올라가는 버튼 구현
 6. 샘플 이미지를 로컬에서 사용
+
+
+poetdeveloper.iro@gmail.com
