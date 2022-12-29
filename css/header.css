@@ -22,7 +22,7 @@
 }
 
 .header .logo {
-     min-width: 200px;
+     min-width: 150px;
      height: 100%;
      background-color: aliceblue;
      display: flex;
@@ -30,7 +30,7 @@
      align-items: center;
      font-weight: bold;
      font-size: 1.5rem;
-     margin-right: 2rem;
+     margin-left: 1rem;
 }
 
 .header .logo a {
@@ -44,7 +44,7 @@
      display: flex;
      padding: 0 2rem 0 1rem;
      justify-content: space-around;
-     min-width: 300px;
+     min-width: 270px;
      align-items: center;
      background-color: aliceblue;
 }
@@ -167,7 +167,7 @@
 
 /* 메뉴 펼쳐보기  */
 
-@media(max-width : 1000px) {
+@media(max-width : 1024px) {
      .header .menu-bar {
           display: none;
      }
@@ -179,6 +179,12 @@
 
      .header .search-bar input {
           display: none;
+     }
+}
+
+@media(max-width: 750px) {
+     .header .right-etc {
+          min-width: 200px;
      }
 }
 
