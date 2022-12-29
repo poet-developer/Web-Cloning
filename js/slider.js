@@ -1,3 +1,8 @@
+/**
+ * 슬라이더 안에 들어가는 컨텐츠들을 js로 구현한다.
+ * 서버에서 데이터를 받아오는 것을 염두한다.
+ */
+
 (function () {
                const contentElem = document.querySelector('.splide__list');
 

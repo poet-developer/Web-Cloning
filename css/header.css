@@ -1,169 +1,191 @@
-          .header {
-               position: fixed;
-               top: 0;
-               left: 0;
+/* 메뉴/로고/검색창/Lang */
 
-               display: flex;
-               flex: 1 1 auto;
-               justify-content: space-between;
-               width: 100vw;
-               height: 80px;
-               /* 고정 값  */
+.header {
+     position: fixed;
+     top: 0;
+     left: 0;
 
-               background-color: aliceblue;
-               z-index: 2;
-          }
+     display: flex;
+     flex: 1 1 auto;
+     justify-content: space-between;
+     height: 80px;
+     /* 고정 값  */
 
-          .header .logo {
-               min-width: 200px;
-               height: 100%;
-               background-color: aliceblue;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               font-weight: bold;
-               font-size: 1.5rem;
-          }
+     background-color: aliceblue;
+     z-index: 2;
+     position: relative;
+}
 
-          .header .logo a {
-               text-decoration: none;
-               color: black;
-          }
+.header .menu-bar {
+     flex: 1 1 300px;
 
-          /* 검색 다국어  */
-          .header .right-etc {
-               flex: 0 0 auto;
-               display: flex;
-               padding: 0 1rem 0 1rem;
-               justify-content: space-around;
-               width: 260px;
-               align-items: center;
-               background-color: aliceblue;
-          }
+}
 
-          .header .right-etc .menu-icon {
-               display: none;
-          }
+.header .logo {
+     min-width: 200px;
+     height: 100%;
+     background-color: aliceblue;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight: bold;
+     font-size: 1.5rem;
+     margin-right: 2rem;
+}
 
-          .header .search-bar input {
-               width: 150px;
-               height: 30px;
-          }
+.header .logo a {
+     text-decoration: none;
+     color: black;
+}
 
-          .header .search-bar a i {
-               transform: scale(1.5);
-               margin-left: 0.5rem;
-               cursor: pointer;
-          }
+/* 검색 다국어  */
+.header .right-etc {
+     flex: 0 0 auto;
+     display: flex;
+     padding: 0 2rem 0 1rem;
+     justify-content: space-around;
+     min-width: 300px;
+     align-items: center;
+     background-color: aliceblue;
+}
 
-          .header .lang i {
-               transform: scale(1.6) translateY(-1px);
-               cursor: pointer;
-          }
+.header .right-etc .menu-icon {
+     display: none;
+}
 
-          /* 검색 다국어  */
+.menu-icon:hover .dropdown-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 300px;
+     gap: 2rem;
+     width: 100%;
+}
 
-          /* 메뉴 펼쳐보기  */
-          .dropdown {
-               float: left;
-               overflow: hidden;
-               display: flex;
-               align-items: center;
-               /* width: 100%; */
-               justify-content: center;
-               padding: 0 5rem 0 5rem;
-               gap: 2rem;
-               height: 100%;
-               color: grey;
-               font-size: 1.2rem;
-               font-weight: bold;
-          }
+.header .search-bar input {
+     width: 150px;
+     height: 30px;
+     border: none;
+     border-bottom: 2px solid black;
+     background: transparent;
+}
 
-          .dropdown .item {
-               width: 100px;
-          }
+.header .search-bar a i {
+     transform: scale(1.5);
+     margin-left: 0.5rem;
+     cursor: pointer;
+}
 
-          .dropdown-content {
-               display: none;
-               position: absolute;
-               background-color: #f9f9f9;
-               width: calc(100vw + 4rem);
-               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-               z-index: 1;
-               top: 80px;
-               padding-left: 5rem;
-          }
+.header .lang i {
+     transform: scale(1.6) translateY(-1px);
+     cursor: pointer;
+}
 
-          .index-title {
-               width: 100%;
-               display: flex;
-               justify-content: space-around;
-               align-items: center;
-               gap: 1rem;
-               height: 80px;
-               border-bottom: 1px solid gray;
-          }
+/* 검색 다국어  */
 
-          .index-title a {
-               width: 100%;
-               height: 100%;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               text-decoration: none;
-               color: orange;
-          }
+/* 메뉴 펼쳐보기  */
+.dropdown {
+     /* float: left; */
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     width: 100%;
+     justify-content: center;
+     /* padding: 0 5rem 0 5rem; */
+     gap: 2rem;
+     height: 100%;
+     color: grey;
+     font-size: 1.2rem;
+     font-weight: bold;
+}
 
-          .index-detail {
-               width: 100%;
-               display: flex;
-               justify-content: space-around;
-               align-items: center;
-               gap: 1rem;
-               height: 80px;
-               margin-top: 1rem;
-          }
+.dropdown .item {
+     width: 120px;
+     font-size: 1.2rem;
+}
 
-          .index-list {
-               display: flex;
-               flex-direction: column;
-               gap: 2rem;
-          }
+.dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     width: 100%;
+     left: 0;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+     top: 80px;
+}
 
-          .index-list a {
-               text-decoration: none;
-               color: grey;
-          }
+.index-title {
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     gap: 1rem;
+     height: 80px;
+     border-bottom: 1px solid gray;
+}
 
-          .dropdown:hover .dropdown-content {
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               height: 300px;
-               gap: 2rem;
-               width: 100%;
-          }
+.index-title a {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-decoration: none;
+     color: orange;
+}
 
-          /* 메뉴 펼쳐보기  */
+.index-detail {
+     width: 100%;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     gap: 1rem;
+     height: 80px;
+     margin-top: 1rem;
+}
 
-          @media(max-width : 1000px) {
-               .header .menu-bar {
-                    display: none;
-               }
+.index-list {
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+}
 
-               .header .right-etc .menu-icon {
-                    display: block;
-               }
+.index-list a {
+     text-decoration: none;
+     color: grey;
+}
 
-               .header .search-bar input {
-                    display: none;
-               }
-          }
+.dropdown:hover .dropdown-content {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 300px;
+     gap: 2rem;
+     width: 100%;
+}
 
-          .menu-icon {
-               transform: scale(1.5);
-          }
+/* 메뉴 펼쳐보기  */
 
-          .search-icon {
-               margin-left: 0.5rem;
-          }
+@media(max-width : 1000px) {
+     .header .menu-bar {
+          display: none;
+     }
+
+     .header .right-etc .menu-icon {
+          display: block;
+          cursor: pointer;
+     }
+
+     .header .search-bar input {
+          display: none;
+     }
+}
+
+.menu-icon {
+     transform: scale(1.5);
+}
+
+.search-icon {
+     margin-left: 0.5rem;
+}

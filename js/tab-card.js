@@ -1,24 +1,30 @@
+/**
+ * 탭 안에 들어가는 컨텐츠들을 js로 구현한다.
+ * 서버에서 데이터를 받아오는 것을 염두한다.
+ * 토픽 별로 정렬이 달리될것.
+ */
+
 (function(){
      const girdContainer = document.querySelector('.grid-container');
      const tabItems = document.querySelectorAll('.tab-list');
      let currentTab = '추천';
      const dummyData = [
-          {id : 0,title: '제목1', topic: '추천 지속가능경영'},
-          {id : 1,title: '제목2', topic: '추천 사람문화'},
-          {id : 2,title: '제목3', topic: '추천 기술 보도자료'},
-          {id : 3,title: '제목4', topic: '추천 지속가능경영 보도자료'},
-          {id : 4,title: '제목5', topic: '추천 보도자료'},
-          {id : 5,title: '제목6', topic: '추천 지속가능경영 보도자료'},
-          {id : 6,title: '제목7', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 7, title: '제목8', topic: '추천 기술 지속가능경영 보도자료'},
-          {id : 8, title: '제목9', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 9, title: '제목10', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 10, title: '제목11', topic: '추천 사람문화 보도자료'},
-          {id : 11, title: '제목12', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 12, title: '제목13', topic: '추천 기술'},
-          {id : 13, title: '제목14', topic: '추천 기술'},
-          {id : 14, title: '제목15', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id: 15, title: '제목16', topic: '추천 보도자료'},
+          {id : 0,title: '제목1', topic: '추천 지속가능경영', desc:'elit. At voluptas perspiciatis dolores quasi suscipit, aliquam, dolorem adipisci minima optio'},
+          {id : 1,title: '제목2', topic: '추천 사람문화', desc:'elit. At voluptas dolorem adipisci minima optio'},
+          {id : 2,title: '제목3', topic: '추천 기술 보도자료', desc: 'accusantium quisquam! Perspiciatis reiciendis doloremque numquam a provident rem dicta co'},
+          {id : 3,title: '제목4', topic: '추천 지속가능경영 보도자료', desc : 'accusantium quisquam! Perspiciatis reiciendis doloremque numquuisquam! Perspiciatis reiciendis doloremque numquam a provident rem dicta co'},
+          {id : 4,title: '제목5', topic: '추천 보도자료', desc: 'accusantium quisquam! Perspiciatis reiciendis doloremque numquam a provident rem dicta coAt voluptas perspiciatis dolores quasi suscipit, aliquam, dolo'},
+          {id : 5,title: '제목6', topic: '추천 지속가능경영 보도자료' ,desc: 'At voluptas perspiciatis dolores quasi suscipit, aliquam, dolo'},
+          {id : 6,title: '제목7', topic: '추천 기술 사람문화 지속가능경영 보도자료', desc :'usantium quisquam! Perspiciatis reiciendis doloremque numquam a provident rem'},
+          {id : 7, title: '제목8', topic: '추천 기술 지속가능경영 보도자료', desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. At voluptas perspiciatis dolores quasi suscipit, aliquam, dolorem'},
+          {id : 8, title: '제목9', topic: '추천 기술 사람문화 지속가능경영 보도자료', desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. At voluptas perspiciatis dolores quasi suscipit, aliquam, dolorem'},
+          {id : 9, title: '제목10', topic: '추천 기술 사람문화 지속가능경영 보도자료', desc:'Ldolorem'},
+          {id : 10, title: '제목11', topic: '추천 사람문화 보도자료', desc:'lorem adipisci minima opti'},
+          {id : 11, title: '제목12', topic: '추천 기술 사람문화 지속가능경영 보도자료', desc:'lorem a minima optilorem adipisci minima opti'},
+          {id : 12, title: '제목13', topic: '추천 기술', desc: 'elit. Nam provident necessitatibus, vitae doloribus obcaecati aperiam, non esse consequuntur iste sequi molestias earum minima'},
+          {id : 13, title: '제목14', topic: '추천 기술', desc: 'non esse consequuntur iste sequi molestias earum minima quos ratione optio corporis quam natus voluptatibus?'},
+          {id : 14, title: '제목15', topic: '추천 기술 사람문화 지속가능경영 보도자료', desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam provident necessitatibus, vitae doloribus obcaecat'},
+          {id: 15, title: '제목16', topic: '추천 보도자료', desc: 'necessitatibus, vitae doloribus obcaecat'},
      ]
      // 서버에서 온 전체 데이터 (Dummy DB)
 
@@ -66,7 +72,7 @@
                     const newDiv = document.createElement("div");
                     newDiv.classList.add('grid-item')
                     newDiv.setAttribute('data-topic',data[i].topic);
-                    newDiv.innerHTML = `<h4 class = 'title'>${data[i].title}</h4><br>${data[i].topic}`;
+                    newDiv.innerHTML = `<h4 class = 'title'>${data[i].title}</h4><br><h5 class = 'topic'>${data[i].topic}</h5><br><p class = 'desc'>${data[i].desc || ''}</p>`;
                     girdContainer.append(newDiv);
                }
      }
@@ -76,6 +82,7 @@
           getMode(tabItems) // 클릭이벤트 감지
           createElement(filteredData) // 추천 탭 데이터 가져오기
      } // 최초실행 함수
+     
 
      init();
 }())

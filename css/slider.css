@@ -1,16 +1,15 @@
+ /* splide 라이브러리를 기반으로 슬라이드의 세부 디자인 변경 */
+
  .slider-container {
       background-color: rgba(0, 0, 0, 0.05);
       display: flex;
-      /* flex-direction: column; */
       justify-content: center;
       align-items: center;
       width: 100vw;
-      padding-top: 3rem;
  }
 
  .splide {
       margin: 4rem;
-      /* margin-top: 6rem; */
       margin-bottom: 4rem;
  }
 
