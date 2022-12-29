@@ -10,10 +10,9 @@
      justify-content: space-between;
      height: 80px;
      /* 고정 값  */
-
+     width: 100vw;
      background-color: aliceblue;
      z-index: 2;
-     position: relative;
 }
 
 .header .menu-bar {
