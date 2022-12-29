@@ -3,11 +3,11 @@
      const tabItems = document.querySelectorAll('.tab-list');
      let currentTab = '추천';
      const dummyData = [
-          {id : 0,title: '제목1', topic: '추천 기술 사람문화'},
+          {id : 0,title: '제목1', topic: '추천 지속가능경영'},
           {id : 1,title: '제목2', topic: '추천 사람문화'},
-          {id : 2,title: '제목3', topic: '추천 기술 지속가능경영 보도자료'},
+          {id : 2,title: '제목3', topic: '추천 기술 보도자료'},
           {id : 3,title: '제목4', topic: '추천 지속가능경영 보도자료'},
-          {id : 4,title: '제목5', topic: '추천'},
+          {id : 4,title: '제목5', topic: '추천 보도자료'},
           {id : 5,title: '제목6', topic: '추천 지속가능경영 보도자료'},
           {id : 6,title: '제목7', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
           {id : 7, title: '제목8', topic: '추천 기술 지속가능경영 보도자료'},

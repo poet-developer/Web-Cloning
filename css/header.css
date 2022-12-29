@@ -25,8 +25,14 @@
                font-size: 1.5rem;
           }
 
+          .header .logo a {
+               text-decoration: none;
+               color: black;
+          }
 
+          /* 검색 다국어  */
           .header .right-etc {
+               flex: 0 0 auto;
                display: flex;
                padding: 0 1rem 0 1rem;
                justify-content: space-around;
@@ -40,9 +46,24 @@
           }
 
           .header .search-bar input {
-               width: 100px;
+               width: 150px;
+               height: 30px;
           }
 
+          .header .search-bar a i {
+               transform: scale(1.5);
+               margin-left: 0.5rem;
+               cursor: pointer;
+          }
+
+          .header .lang i {
+               transform: scale(1.6) translateY(-1px);
+               cursor: pointer;
+          }
+
+          /* 검색 다국어  */
+
+          /* 메뉴 펼쳐보기  */
           .dropdown {
                float: left;
                overflow: hidden;
@@ -66,7 +87,7 @@
                display: none;
                position: absolute;
                background-color: #f9f9f9;
-               min-width: calc(100vw + 4rem);
+               width: calc(100vw + 4rem);
                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                z-index: 1;
                top: 80px;
@@ -84,12 +105,13 @@
           }
 
           .index-title a {
-
                width: 100%;
                height: 100%;
                display: flex;
                justify-content: center;
                align-items: center;
+               text-decoration: none;
+               color: orange;
           }
 
           .index-detail {
@@ -108,15 +130,23 @@
                gap: 2rem;
           }
 
+          .index-list a {
+               text-decoration: none;
+               color: grey;
+          }
+
           .dropdown:hover .dropdown-content {
                display: flex;
                flex-direction: column;
                align-items: center;
                height: 300px;
                gap: 2rem;
+               width: 100%;
           }
 
-          @media(max-width : 950px) {
+          /* 메뉴 펼쳐보기  */
+
+          @media(max-width : 1000px) {
                .header .menu-bar {
                     display: none;
                }
