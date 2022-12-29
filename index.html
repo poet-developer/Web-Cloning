@@ -13,6 +13,7 @@
      <link rel="stylesheet" href="./css/grid.css">
      <link rel="stylesheet" href="./css/etc.css">
      <link rel="stylesheet" href="./css/footer.css">
+     <script src="https://kit.fontawesome.com/b8f6611975.js" crossorigin="anonymous"></script>
      <style>
           .main-container {
                width: 100vw;
@@ -33,7 +34,7 @@
      <div class="main-container">
           <!-- header - DNS -->
           <header class="main-item header">
-               <div class="logo">LOGO</div>
+               <div class="logo">HELLODIGITAL</div>
                <ul class="menu-bar">
                     <li class="dropdown">
                          <div class="item">기술</div>
@@ -82,10 +83,10 @@
                <div class="right-etc">
                     <div class="search-bar">
                          <input type="text" placeholder="반도체를 검색해 보세요">
-                         <button>0</button>
+                         <a class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
                     </div>
                     <div class="lang">ICON</div>
-                    <div class="menu-icon">ㅁ</div>
+                    <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
                </div>
 
           </header>
@@ -128,13 +129,43 @@
                     <div class="card-more"><a href="">글 더보기</a></div>
                </div>
                <!-- grid -->
-               <section style="background-image: url();" class="etc-con">
-                    <div class="etc-item">미디어라이브러리</div>
-                    <div class="etc-item">회사소개</div>
-                    <div class="etc-item">뉴스</div>
+               <section class="etc-con">
+                    <article class="etc-item">
+                         <div class="media-library">
+                              <div class="title-box">
+                                   <h4>미디어라이브러리</h4>
+                                   <div>소개합니다</div>
+                              </div>
+                              <div class="search-box">
+                                   <input type="text">
+                                   <input type="submit" value="검색">
+                              </div>
+                         </div>
+                         <div class="media-library coverImg" style="background-image: url('./img/1.jpg');"></div>
+                    </article>
+                    <article class="etc-item" style="background-image:url(./img/6.jpg)">
+                         <div></div>
+                         <div class="introduce">
+                              <div class="title">회사 소개</div>
+                              <div class="desc">더 나은 세상을 만듭니다</div>
+                         </div>
+                    </article>
+                    <article class="etc-item">
+                         <div class="media-library coverImg" style="background-image: url('./img/2.jpg');"></div>
+                         <div class="news">
+                              <div class="title-box">
+                                   <div>뉴스룸을 구독하세요</div>
+                              </div>
+                              <div class="desc-box">
+                                   전하는 산업 및 비즈니스 트렌드, 그리고 함께하는 세상의 다양한 이야기를 전합니다
+                              </div>
+                         </div>
+                    </article>
                </section>
                <div class="body-item">
-                    <i id="top-btn">위</i>
+                    <a href="">
+                         <i id="top-btn">&lt;</i>
+                    </a>
                </div>
           </section>
           <div class="main-item footer-container">
@@ -142,16 +173,21 @@
           </div>
      </div>
      <!-- 슬라이더 라이브러리를 포함한 js -->
-     <script src="./js/splide.min.js"></script>
+
+     <script src="./js/Splide/dist/js/splide.min.js"></script>
      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-               var splide = new Splide('.splide');
-               splide.mount();
-          });
+          (function () {
+               document.addEventListener('DOMContentLoaded', function () {
+                    var splide = new Splide('.splide');
+                    splide.mount();
+               });
+          }());
      </script>
      <script src="./js/slider.js"></script>
-     <!-- 슬라이더 라이브러리를 포함한 js -->
      <script src="./js/tab-card.js"></script>
+     <script src="./js/top-animatin.js"></script>
+     <!-- 슬라이더 라이브러리를 포함한 js -->
+
 </body>
 
 </html>

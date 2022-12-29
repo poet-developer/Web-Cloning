@@ -4,8 +4,103 @@
 
 .etc-item {
      height: 20rem;
-     background-color: #4747b3;
+     background-color: white;
      margin-bottom: 2rem;
+     display: flex;
+     width: 100%;
+}
+
+.etc-item:nth-child(1) .media-library {
+     flex: 1 1 50%;
+     padding: 0 1rem;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     justify-content: space-between;
+}
+
+.etc-item:nth-child(2) {
+     display: flex;
+}
+
+.etc-item:nth-child(2) div {
+     flex: 1 1 50%;
+}
+
+.media-library .title-box {
+     flex: 1 1 50%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border-bottom: 1px solid lightgray;
+}
+
+.title-box h4 {
+     font-weight: bold;
+     color: orange;
+     padding-top: 0.5rem;
+}
+
+.title-box div {
+     font-size: 1.5rem;
+     padding: 1rem 0;
+}
+
+.search-box {
+     flex: 1 1 50%;
+     display: flex;
+     align-items: center;
+}
+
+.coverImg {
+     object-fit: contain;
+     height: 100%;
+     width: 100%;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.introduce {
+     margin-top: 8rem;
+     font-weight: bold;
+}
+
+.introduce .title {
+     color: orange;
+     font-weight: bold;
+}
+
+.introduce .desc {
+     color: aliceblue;
+     padding-top: 2rem;
+     font-size: 2rem;
+}
+
+.etc-item:nth-child(3) {
+     flex: 1 1 50%;
+     display: flex;
+     justify-content: space-between;
+}
+
+.etc-item:nth-child(3) .news {
+     flex: 1 1 50%;
+     padding: 0 0.5rem;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     justify-content: center;
+}
+
+.news .title-box {
+     display: flex;
+     flex-direction: column;
+     border-bottom: 1px solid lightgray;
+}
+
+.news .desc-box {
+     font-size: 1rem;
+     padding: 2rem 0;
 }
 
 #top-btn {
@@ -22,4 +117,11 @@
      display: flex;
      justify-content: center;
      align-items: center;
+}
+
+@media(max-width : 950px) {
+     .etc-item {
+          display: flex;
+          flex-direction: column;
+     }
 }

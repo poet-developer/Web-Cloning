@@ -1,20 +1,14 @@
 (function () {
                const contentElem = document.querySelector('.splide__list');
 
-               const data = [{ cover : 'https://picsum.photos/500', title : 'title1',desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ratione quia ad iusto, enim provident magnam, pariatur voluptatem qui ipsa, excepturi quae in tempora! Doloremque possimus placeat iusto eos omnis.', color: 'rgba(255, 101, 101, 0.5)' },
-               { cover : 'https://picsum.photos/400', title : 'Loror si Lorem ipsum dolor si Lorem ipsum dolor si',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum reprehenderit accusamus, autem quis corporis amet fugit. Dolor, sit temporibus deleniti nesciunt quibusdam impedit animi.', color: 'rgba(255, 156, 99, 0.5)' },
-               { cover : 'https://picsum.photos/500', title : 'em ipsum dolor sit',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum reprehenderit accusamus, autem quis corporis amet fugit. Dolor, sit temporibus deleniti nesciunt quibusdam impedit animi.', color: 'rgba(255, 232, 101, 0.5)' },
-               { cover : 'https://picsum.photos/400/500', title : 'emr sit',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum reprehenderit accusamus, autem quis corporis amet fugit. Dolor, sit t', color: 'rgba(101, 224, 255, 0.5' },
-               { cover : 'https://picsum.photos/700', title : 'em ipsum dolor sit',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum', color: 'rgba(61, 42, 46, 0.5)' },
-               { cover : 'https://picsum.photos/450', title : 'title5',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum', color: 'rgba(120, 100, 93)' }
+               const data = [{ cover : './img/1.jpg', title : 'title1',desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ratione quia ad iusto, enim provident magnam, pariatur voluptatem qui ipsa, excepturi quae in tempora! Doloremque possimus placeat iusto eos omnis.', color: 'rgba(255, 101, 101, 0.5)' },
+               { cover : './img/2.jpg', title : 'Loror si Lorem ipsum dolor si Lorem ipsum dolor si',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum reprehenderit accusamus, autem quis corporis amet fugit. Dolor, sit temporibus deleniti nesciunt quibusdam impedit animi.', color: 'rgba(255, 156, 99, 0.5)' },
+               { cover : './img/3.jpg', title : 'em ipsum dolor sit',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum reprehenderit accusamus, autem quis corporis amet fugit. Dolor, sit temporibus deleniti nesciunt quibusdam impedit animi.', color: 'rgba(255, 232, 101, 0.5)' },
+               { cover : './img/4.jpg', title : 'emr sit',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum reprehenderit accusamus, autem quis corporis amet fugit. Dolor, sit t', color: 'rgba(101, 224, 255, 0.5' },
+               { cover : './img/5.jpg', title : 'em ipsum dolor sit',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum', color: 'rgba(61, 42, 46, 0.5)' },
+               { cover : './img/6.jpg', title : 'title5',desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ratione voluptate dicta sint, quas laborum', color: 'rgba(120, 100, 93)' }
                ]
-
-               function init() {
-                    makeContent(data);
-               }
                
-
-               //data를 받아 Dom 생성
                const makeContent = (data) => {
                     for (var i = 0; i < data.length; i++) {
                          const newDiv = document.createElement("li");
@@ -38,10 +32,16 @@
                          </div>
                          `
                          newDiv.appendChild(cover);
-                         newDiv.style.background = data[i].color
+                         newDiv.style.background = data[i].color;
                          contentElem.appendChild(newDiv);
                     }
                }
+               //data를 받아 Dom 생성
+
+               function init() {
+                    makeContent(data);
+               }
+          
 
                init();
 

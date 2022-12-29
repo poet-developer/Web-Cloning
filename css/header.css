@@ -17,7 +17,12 @@
           .header .logo {
                min-width: 200px;
                height: 100%;
-               background-color: gold;
+               background-color: aliceblue;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               font-weight: bold;
+               font-size: 1.5rem;
           }
 
 
@@ -27,7 +32,7 @@
                justify-content: space-around;
                width: 260px;
                align-items: center;
-               background-color: teal;
+               background-color: aliceblue;
           }
 
           .header .right-etc .menu-icon {
@@ -123,4 +128,12 @@
                .header .search-bar input {
                     display: none;
                }
+          }
+
+          .menu-icon {
+               transform: scale(1.5);
+          }
+
+          .search-icon {
+               margin-left: 0.5rem;
           }

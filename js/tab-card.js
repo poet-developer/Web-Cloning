@@ -3,22 +3,22 @@
      const tabItems = document.querySelectorAll('.tab-list');
      let currentTab = '추천';
      const dummyData = [
-          {id : 0,title: 'Adsdsdsd', topic: '추천 기술 사람문화'},
-          {id : 1,title: 'B', topic: '추천 사람문화'},
-          {id : 2,title: 'C', topic: '추천 기술 지속가능경영 보도자료'},
-          {id : 3,title: 'D', topic: '추천 지속가능경영 보도자료'},
-          {id : 4,title: 'E', topic: '추천'},
-          {id : 5,title: 'F', topic: '추천 지속가능경영 보도자료'},
-          {id : 6,title: 'A', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 7, title: 'B', topic: '추천 기술 지속가능경영 보도자료'},
-          {id : 8, title: 'C', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 9, title: 'D', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 10, title: 'E', topic: '추천 사람문화 보도자료'},
-          {id : 11, title: 'F', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id : 12, title: 'A', topic: '추천 기술'},
-          {id : 13, title: 'B', topic: '추천 기술'},
-          {id : 14, title: 'C', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
-          {id: 15, title: 'D', topic: '추천 보도자료'},
+          {id : 0,title: '제목1', topic: '추천 기술 사람문화'},
+          {id : 1,title: '제목2', topic: '추천 사람문화'},
+          {id : 2,title: '제목3', topic: '추천 기술 지속가능경영 보도자료'},
+          {id : 3,title: '제목4', topic: '추천 지속가능경영 보도자료'},
+          {id : 4,title: '제목5', topic: '추천'},
+          {id : 5,title: '제목6', topic: '추천 지속가능경영 보도자료'},
+          {id : 6,title: '제목7', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
+          {id : 7, title: '제목8', topic: '추천 기술 지속가능경영 보도자료'},
+          {id : 8, title: '제목9', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
+          {id : 9, title: '제목10', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
+          {id : 10, title: '제목11', topic: '추천 사람문화 보도자료'},
+          {id : 11, title: '제목12', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
+          {id : 12, title: '제목13', topic: '추천 기술'},
+          {id : 13, title: '제목14', topic: '추천 기술'},
+          {id : 14, title: '제목15', topic: '추천 기술 사람문화 지속가능경영 보도자료'},
+          {id: 15, title: '제목16', topic: '추천 보도자료'},
      ]
      // 서버에서 온 전체 데이터 (Dummy DB)
 
@@ -66,7 +66,7 @@
                     const newDiv = document.createElement("div");
                     newDiv.classList.add('grid-item')
                     newDiv.setAttribute('data-topic',data[i].topic);
-                    newDiv.innerHTML = data[i].title;
+                    newDiv.innerHTML = `<h4 class = 'title'>${data[i].title}</h4><br>${data[i].topic}`;
                     girdContainer.append(newDiv);
                }
      }
